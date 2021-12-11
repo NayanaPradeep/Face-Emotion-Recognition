@@ -10,10 +10,10 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 # load model
 emotion_dict = ["Angry","Disgust","Fear","Happy","Neutral","Sad","Surprise"]
 
-classifier =load_model('CNN_model.h5')
+classifier =load_model('model1.h5')
 
 # load weights into new model
-classifier.load_weights("CNN_model.h5")
+classifier.load_weights("model1.h5")
 
 #load face
 try:
