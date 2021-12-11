@@ -53,9 +53,9 @@ def main():
     activiteis = ["Home", "Webcam Face Detection", "About"]
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
-        """ Developed by Saurabh Daund and Mouleena Jaiswal. 
-        [Saurabh Daund LinkedIn] (https://www.linkedin.com/in/saurabh-daund-a3558a213)   
-        [Mouleena Jaiswal LinkedIn] (https://www.linkedin.com/in/mouleena-jaiswal-822bb01b1)""")
+        """ DEVELOPED BY 
+		NAYANA PRADEEP 
+ )""")
     if choice == "Home":
         html_temp_home1 = """<div style="background-color:#6D7B8D;padding:10px">
                                             <h4 style="color:white;text-align:center;">
@@ -84,8 +84,7 @@ def main():
 
         html_temp4 = """
                              		<div style="background-color:#98AFC7;padding:10px">
-                             		<h4 style="color:white;text-align:center;">This Application is developed by Saurabh Daund and Mouleena Jaiswal
-                             		using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose. </h4>
+                             		<h4 style="color:white;text-align:center;">This Application is developed using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose. </h4>
                              		<h4 style="color:white;text-align:center;">Thanks for Visiting</h4>
                              		</div>
                              		<br></br>
