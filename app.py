@@ -75,7 +75,7 @@ def main():
     elif choice == "Webcam Face Detection":
         st.header("Webcam Live Feed")
         st.write("CLICK ON START TO BEGIN THE DETECTION")
-        webrtc_streamer(key="example", video_transformer_factory=VideoTransformer)
+        webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
 
     elif choice == "About":
         st.subheader("About this app")
