@@ -16,6 +16,7 @@ classifier =load_model('model1.h5')
 # load weights into new model
 classifier.load_weights("model1.h5")
 
+
 #load face
 try:
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -50,7 +51,7 @@ class VideoTransformer(VideoProcessorBase):
 
 def main():
     # Face Analysis Application #
-    st.title("Real Time Face Emotion Detection Application")
+    st.title("FACE EMOTION RECOGNITION")
     sel_choice = ["Home", "Webcam Face Detection", "About"]
     choice = st.sidebar.selectbox("Select Activity", sel_choice)
     st.sidebar.markdown(
@@ -58,9 +59,9 @@ def main():
 	      NAYANA PRADEEP
  	      nayanapradeep92@gmail.com""")
     if choice == "Home":
-        html_temp_home1 = """<div style="background-color:#6D7B8D;padding:10px">
+        html_temp_home1 = """<div style="background-color:#9D7B8D;padding:10px">
                                             <h4 style="color:white;text-align:center;">
-                                            Face Emotion detection application using OpenCV, Custom CNN model and Streamlit.</h4>
+                                            Face Emotion Recognition Application using Custom CNN model </h4>
                                             </div>
                                             </br>"""
         st.markdown(html_temp_home1, unsafe_allow_html=True)
@@ -78,24 +79,14 @@ def main():
         webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
 
     elif choice == "About":
-        st.subheader("About this app")
-        html_temp_about1= """<div style="background-color:#6D7B8D;padding:10px">
+         
+        html_temp_about= """<div style="background-color:#9D7B8D;padding:10px">
                                     <h4 style="color:white;text-align:center;">
-                                    Real Time Face Emotion Recognition using OpenCV, Custom Trained CNN model and Streamlit.</h4>
+                                    Real Time Face Emotion Recognition using Custom CNN model and Streamlit.</h4>
                                     </div>
                                     </br>"""
-        st.markdown(html_temp_about1, unsafe_allow_html=True)
-
-        html_temp4 = """
-                             		<div style="background-color:#98AFC7;padding:10px">
-                             		<h4 style="color:white;text-align:center;">Application developed
-                             		using Streamlit Framework, Opencv, Tensorflow and Keras library for demonstration purpose. </h4>
-                             		<h4 style="color:white;text-align:center;">Thanks for Visiting</h4>
-                             		</div>
-                             		<br></br>
-                             		<br></br>"""
-
-        st.markdown(html_temp4, unsafe_allow_html=True)
+        st.markdown(html_temp_about, unsafe_allow_html=True)
+ 
     
     else:
         pass
