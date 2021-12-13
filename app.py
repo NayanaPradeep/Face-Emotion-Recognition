@@ -1,11 +1,12 @@
 # Importing Libraries
 import numpy as np
 import cv2
+import av
 import streamlit as st
 from tensorflow import keras
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
+from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 
 # load model
 emotion_dict = ["Angry","Disgust","Fear","Happy","Sad","Surprise","Neutral"]
@@ -21,8 +22,8 @@ try:
 except Exception:
     st.write("Error loading cascade classifiers")
 
-class VideoTransformer(VideoTransformerBase):
-    def transform(self, frame):
+class VideoTransformer(VideoProcessorBase):
+    def recv(self,frame: av.VideoFrame) -> av.VideoFrame:
         img = frame.to_ndarray(format="bgr24")
 
         #image gray
@@ -45,7 +46,7 @@ class VideoTransformer(VideoTransformerBase):
             label_position = (x, y)
             cv2.putText(img, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-        return img
+        return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 def main():
     # Face Analysis Application #
