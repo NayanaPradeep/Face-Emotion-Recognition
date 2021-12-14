@@ -31,6 +31,10 @@ This is a few shot learning live face emotion detection system. The model should
 
 ![image](https://user-images.githubusercontent.com/88419896/146051028-83114199-a076-4954-9744-1a4fdd941ab8.png)
 
+# Dataset
+
+Link :- https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data
+
 
 # Model Creation
 
@@ -67,7 +71,7 @@ Steps for hosting this application in local environment
 1) Create a new virtual environment with python 3.7 version
 2) Install streamlit,tensorflow,opencv,streamlit-webrtc packages 
 3) Download the app.py, model1.h5, model1.json and haarcascade_frontalface_default.xml from this repository to a local folder in your machine
-4) In the new virtual environment using command prompt go to the app.py folder location
+4) In the new virtual environment using command prompt go to the local folder where the above files are downloaded
 5) run the command : streamlit run app.py
 
 The application will open up in your local browser.
