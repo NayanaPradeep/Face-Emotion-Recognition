@@ -9,7 +9,7 @@ We want this task to be performed by machines. Deep learning comes into play at 
 Artificial Intelligence's rapid development has made a significant contribution to the technological world. Machine Learning (ML) and Deep Learning (DL) algorithms have achieved considerable success in various applications such as classification systems, recommendation systems, pattern recognition etc. 
 
 
-Emotion recognition is very significant as it has wide range applications in the field of Computer Vision and Artificial Intelligence
+Emotion recognition is very significant as it has wide range applications in the field of Computer Vision and Artificial Intelligence.
 
 
  
@@ -27,4 +27,62 @@ In a physical classroom during a lecturing teacher can see the faces and assess 
 
 We will solve the above-mentioned challenge by applying deep learning algorithms to live video data. The solution to this problem is by recognizing facial emotions.
 
-This is a few shot learning live face emotion detection system. The model should be able to real-time identify the emotions of students in a live class
+This is a few shot learning live face emotion detection system. The model should be able to real-time identify the emotions of students in a live class.
+
+![image](https://user-images.githubusercontent.com/88419896/146051028-83114199-a076-4954-9744-1a4fdd941ab8.png)
+
+
+# Model Creation
+
+1) Custom Model 1
+
+Model 1 is sequential model which uses the ELU activation function.
+
+![image](https://user-images.githubusercontent.com/88419896/146051656-228ea429-ea80-4d0c-ac06-2536a13bd902.png)
+
+Training gave 78 percentage accuracy and validation gave 71 percentage accuracy
+
+
+2) Custom Model 2
+
+Model 2 is also sequential model which uses RELU activation function.
+
+![image](https://user-images.githubusercontent.com/88419896/146051721-39e23d3e-3822-488d-8f1a-30404c7988b3.png)
+
+Training gave 72 percentage accuracy and validation gave 68 percentage accuracy.
+
+As the model1 has the better accuracy among the two, this model is deployed in the streamlit application for emotion recognition
+
+
+# Real Time Emotion Recognition
+
+In this repository I have made a front end emotion recognition application using streamlit .This model was deployed on heroku also.
+
+Streamlit Link :- https://share.streamlit.io/nayanapradeep/face-emotion-recognition/main/app.py
+
+Heroku Link :- https://emotion-recognition-2021.herokuapp.com/
+
+
+Steps for hosting this application in local environment
+1) Create a new virtual environment with python 3.7 version
+2) Install streamlit,tensorflow,opencv,streamlit-webrtc packages 
+3) Download the app.py,model1.h5,model1.json and haarcascade_frontalface_default.xml from this repository to a local folder in your machine
+4) In the new virtual environment using command prompt go to the app.py folder location
+5) run the command : streamlit run app.py
+
+The application will open up in your local browser.
+
+Note: Sometimes you have to refresh 2-3 times to get the app running successfully
+
+
+# Conclusion
+
+Emotion Recognition Application has been deployed and providing accurate predictions.
+
+Demo of this application is provided in the link: https://github.com/NayanaPradeep/Face-Emotion-Recognition/tree/main/Demo
+
+
+
+
+
+
