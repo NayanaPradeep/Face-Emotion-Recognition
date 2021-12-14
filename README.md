@@ -34,7 +34,7 @@ This is a few shot learning live face emotion detection system. The model should
 
 # Model Creation
 
-1) Custom Model 1
+## 1) Custom Model 1
 
 Model 1 is sequential model which uses the ELU activation function.
 
@@ -43,7 +43,7 @@ Model 1 is sequential model which uses the ELU activation function.
 Training gave 78 percentage accuracy and validation gave 71 percentage accuracy
 
 
-2) Custom Model 2
+## 2) Custom Model 2
 
 Model 2 is also sequential model which uses RELU activation function.
 
@@ -66,7 +66,7 @@ Heroku Link :- https://emotion-recognition-2021.herokuapp.com/
 Steps for hosting this application in local environment
 1) Create a new virtual environment with python 3.7 version
 2) Install streamlit,tensorflow,opencv,streamlit-webrtc packages 
-3) Download the app.py,model1.h5,model1.json and haarcascade_frontalface_default.xml from this repository to a local folder in your machine
+3) Download the app.py, model1.h5, model1.json and haarcascade_frontalface_default.xml from this repository to a local folder in your machine
 4) In the new virtual environment using command prompt go to the app.py folder location
 5) run the command : streamlit run app.py
 
